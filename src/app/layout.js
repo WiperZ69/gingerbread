@@ -37,8 +37,42 @@ export const valisca = localFont({
 })
 
 export const metadata = {
-	title: 'Пряник',
-	description: 'Наша любимая сладкая пряничная',
+	title: 'Пряники',
+	description:
+		'Наша любимая сладкая пряничная. Закажите вкусные пряники прямо сейчас!',
+	keywords: ['пряники', 'сладости', 'выпечка', 'десерты'],
+	authors: [{ name: 'Название компании' }],
+	openGraph: {
+		title: 'Пряники — вкус и уют',
+		description: 'Самые вкусные домашние пряники с доставкой.',
+		url: 'https://gingerbread-pi.vercel.app/',
+		siteName: 'Пряники',
+		images: [
+			{
+				url: '/col4.png',
+				width: 1200,
+				height: 630,
+				alt: 'Пряники',
+			},
+		],
+		locale: 'ru_RU',
+		type: 'website',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Пряники — вкус и уют',
+		description: 'Самые вкусные домашние пряники с доставкой.',
+		images: ['/col4.png'],
+	},
+	icons: {
+		icon: [
+			{ url: '/favicon.ico', sizes: 'any' },
+			{ url: '/favicon-32x32.png', type: 'image/png', sizes: '32x32' },
+			{ url: '/favicon-16x16.png', type: 'image/png', sizes: '16x16' },
+			{ url: '/favicon.svg', type: 'image/svg+xml' },
+		],
+		apple: [{ url: '/favicon-180x180.png', sizes: '180x180' }],
+	},
 }
 
 export default function RootLayout({ children }) {
