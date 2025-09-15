@@ -12,6 +12,26 @@ html {
 	scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+	width: 12px; /* ширина скроллбара */
+}
+
+::-webkit-scrollbar-track {
+	background: #f2f2f2; /* фон дорожки */
+}
+
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(180deg, #f2b7c6, #f28aa6); /* цвет ползунка */
+	border-radius: 6px; /* скругление ползунка */
+	border: 3px solid #f2f2f2; /* отступ вокруг ползунка */
+}
+
+/* Для Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #f2b7c6 #f2f2f2; /* thumb track */
+}
+
 h1,
 h2,
 h3,
