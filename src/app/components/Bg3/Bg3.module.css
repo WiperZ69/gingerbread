@@ -1,0 +1,15 @@
+.bg {
+	background-image: url('/background3.svg');
+	background-repeat: no-repeat;
+	background-size: 60%;
+	background-position: top 115px right 0px;
+	object-fit: contain;
+}
+
+.bg2 {
+	background-image: url('/background4.svg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: bottom;
+	object-fit: contain;
+}

@@ -1,0 +1,122 @@
+.collection {
+	padding-top: 56px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-inline: clamp(16px, 10vw, 140px);
+}
+
+.title {
+	font-family: var(--font-valisca);
+	padding-bottom: 48px;
+	font-weight: 400;
+	font-size: var(--fs-48);
+	line-height: 120%;
+	color: #272838;
+}
+
+.collection__container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	row-gap: 24px;
+	column-gap: 40px;
+}
+
+.col {
+	border-radius: 24px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: var(--fs-24);
+	height: 240px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	cursor: pointer;
+	transition: all 0.4s ease;
+	&:hover {
+		box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
+	}
+	&:hover &__link {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.col__title {
+	font-weight: 600;
+	font-size: var(--fs-16);
+	line-height: 120%;
+	color: #f2f2f2;
+}
+
+.col__link {
+	transition: opacity 0.4s ease, transform 0.4s ease;
+	opacity: 0;
+	transform: translateX(20px);
+	font-weight: 400;
+	font-size: var(--fs-12);
+	line-height: 120%;
+	color: #f2f2f2;
+	text-align: end;
+	cursor: pointer;
+	display: flex;
+	align-self: self-end;
+	align-items: center;
+	gap: 8px;
+}
+
+.colBig:first-child {
+	grid-column: span 3 / span 3;
+	background-image: linear-gradient(
+			to top,
+			rgba(39, 40, 56, 1) 0%,
+			transparent 100%
+		),
+		url('/col1.png');
+}
+.colBig:nth-child(2) {
+	grid-column: span 3 / span 3;
+	grid-column-start: 4;
+	background-image: linear-gradient(
+			to top,
+			rgba(39, 40, 56, 1) 0%,
+			transparent 100%
+		),
+		url('/col2.png');
+}
+
+.col:nth-child(3),
+.col:nth-child(4),
+.col:nth-child(5) {
+	grid-column: span 2 / span 2;
+	grid-row-start: 2;
+}
+
+.col:nth-child(3) {
+	background-image: linear-gradient(
+			to top,
+			rgba(39, 40, 56, 1) 0%,
+			transparent 100%
+		),
+		url('/col3.png');
+}
+
+.col:nth-child(4) {
+	grid-column-start: 3;
+	background-image: linear-gradient(
+			to top,
+			rgba(39, 40, 56, 1) 0%,
+			transparent 100%
+		),
+		url('/col4.png');
+}
+
+.col:nth-child(5) {
+	grid-column-start: 5;
+	background-image: linear-gradient(
+			to top,
+			rgba(39, 40, 56, 1) 0%,
+			transparent 100%
+		),
+		url('/col5.png');
+}

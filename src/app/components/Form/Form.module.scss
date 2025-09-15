@@ -1,0 +1,209 @@
+.contact {
+	padding-top: 64px;
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-inline: clamp(16px, 10vw, 140px);
+}
+
+.title {
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 120%;
+	color: #272838;
+	font-family: var(--font-valisca);
+	margin-bottom: var(--fs-32);
+}
+
+.contact__container {
+	display: flex;
+}
+
+.form {
+	width: 600px;
+	min-width: 400px;
+	background-color: #f2b7c6;
+	border-radius: 24px;
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+
+	input[type='text'],
+	input[type='tel'],
+	input[type='email'],
+	select,
+	input[type='number'] {
+		border-radius: 16px;
+		border: none;
+		outline: none;
+		width: 100%;
+		padding: 16px;
+		font-size: 16px;
+		color: #272838;
+		background: #fff;
+
+		&::placeholder {
+			color: #7d7e88;
+		}
+	}
+
+	&__row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 16px;
+
+		select {
+			appearance: none;
+			background-color: transparent;
+			border: none;
+			padding: 16px 1em 16px 16px;
+			margin: 0;
+			width: 100%;
+			font-family: var(--font-montserrat);
+			color: #7d7e88;
+			font-size: inherit;
+			cursor: inherit;
+			line-height: inherit;
+			z-index: 1;
+			&::-ms-expand {
+				display: none;
+			}
+			outline: none;
+			cursor: pointer;
+			background: #fff
+				url("data:image/svg+xml;utf8,<svg fill='#f2b7c6' width='7' height='13' xmlns='http://www.w3.org/2000/svg'><path d='M0.379954 6.86196L5.95295 12.172C6.04594 12.2606 6.16948 12.3101 6.29795 12.3101C6.42642 12.3101 6.54997 12.2606 6.64295 12.172L6.64895 12.166C6.69419 12.123 6.73021 12.0713 6.75482 12.0139C6.77944 11.9566 6.79213 11.8949 6.79213 11.8325C6.79213 11.7701 6.77944 11.7083 6.75482 11.651C6.73021 11.5937 6.69419 11.5419 6.64895 11.499L1.40095 6.49896L6.64895 1.50096C6.69419 1.45799 6.73021 1.40626 6.75482 1.34893C6.77944 1.2916 6.79213 1.22986 6.79213 1.16746C6.79213 1.10507 6.77944 1.04333 6.75482 0.985997C6.73021 0.928664 6.69419 0.876937 6.64895 0.833964L6.64295 0.827964C6.54997 0.739319 6.42642 0.689868 6.29795 0.689868C6.16948 0.689868 6.04594 0.739319 5.95295 0.827964L0.379954 6.13796C0.330942 6.18466 0.291922 6.24082 0.265262 6.30305C0.238601 6.36528 0.224854 6.43227 0.224854 6.49996C0.224854 6.56766 0.238601 6.63465 0.265262 6.69688C0.291922 6.7591 0.330942 6.81527 0.379954 6.86196Z'/></svg>")
+				no-repeat right 16px center/32px auto;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 8px;
+
+		.checkbox {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 12px;
+			color: #272838;
+
+			input {
+				display: none;
+			}
+			&__icon {
+				width: 16px;
+				height: 16px;
+				display: inline-block;
+				background-repeat: no-repeat;
+				background-size: contain;
+				flex-shrink: 0;
+				transition: all 0.3s ease;
+				cursor: pointer;
+
+				background-image: url("data:image/svg+xml;utf8,<svg width='14' height='14' xmlns='http://www.w3.org/2000/svg'><path d='M7 0C5.61553 0 4.26216 0.410543 3.11101 1.17971C1.95987 1.94888 1.06266 3.04213 0.532846 4.32122C0.00303298 5.6003 -0.13559 7.00776 0.134506 8.36563C0.404603 9.7235 1.07129 10.9708 2.05026 11.9497C3.02922 12.9287 4.2765 13.5954 5.63437 13.8655C6.99224 14.1356 8.3997 13.997 9.67879 13.4672C10.9579 12.9373 12.0511 12.0401 12.8203 10.889C13.5895 9.73785 14 8.38447 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0ZM7 13C5.81332 13 4.65328 12.6481 3.66658 11.9888C2.67989 11.3295 1.91085 10.3925 1.45673 9.2961C1.0026 8.19974 0.88378 6.99334 1.11529 5.82946C1.3468 4.66557 1.91825 3.59647 2.75736 2.75736C3.59648 1.91824 4.66558 1.3468 5.82946 1.11529C6.99335 0.883777 8.19975 1.0026 9.2961 1.45672C10.3925 1.91085 11.3295 2.67988 11.9888 3.66658C12.6481 4.65327 13 5.81331 13 7C13 8.5913 12.3679 10.1174 11.2426 11.2426C10.1174 12.3679 8.5913 13 7 13Z' fill='%23272838'/></svg>");
+			}
+
+			input:checked + .checkbox__icon {
+				background-image: url("data:image/svg+xml;utf8,<svg width='16' height='16' xmlns='http://www.w3.org/2000/svg'><path d='M7 10.707L4.5 8.2065L5.2065 7.5L7 9.293L10.7925 5.5L11.5 6.2075L7 10.707Z' fill='%23272838'/><path d='M8 1C6.61553 1 5.26216 1.41054 4.11101 2.17971C2.95987 2.94888 2.06266 4.04213 1.53285 5.32122C1.00303 6.6003 0.86441 8.00776 1.13451 9.36563C1.4046 10.7235 2.07129 11.9708 3.05026 12.9497C4.02922 13.9287 5.2765 14.5954 6.63437 14.8655C7.99224 15.1356 9.3997 14.997 10.6788 14.4672C11.9579 13.9373 13.0511 13.0401 13.8203 11.889C14.5895 10.7378 15 9.38447 15 8C15 6.14348 14.2625 4.36301 12.9497 3.05025C11.637 1.7375 9.85652 1 8 1ZM8 14C6.81332 14 5.65328 13.6481 4.66658 12.9888C3.67989 12.3295 2.91085 11.3925 2.45673 10.2961C2.0026 9.19974 1.88378 7.99334 2.11529 6.82946C2.3468 5.66557 2.91825 4.59647 3.75736 3.75736C4.59648 2.91824 5.66558 2.3468 6.82946 2.11529C7.99335 1.88378 9.19975 2.0026 10.2961 2.45672C11.3925 2.91085 12.3295 3.67988 12.9888 4.66658C13.6481 5.65327 14 6.81331 14 8C14 9.5913 13.3679 11.1174 12.2426 12.2426C11.1174 13.3679 9.5913 14 8 14Z' fill='%23272838'/></svg>");
+			}
+
+			&__text {
+				font-size: 12px;
+
+				a {
+					color: #272838;
+					text-decoration: underline;
+				}
+			}
+
+			a {
+				color: #272838;
+				text-decoration: underline;
+			}
+		}
+
+		button {
+			background: #272838;
+			color: #f2f2f2;
+			font-size: 16px;
+			font-weight: 500;
+			border: none;
+			border-radius: 24px;
+			padding: 12px 24px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+
+			&:hover {
+				background: #f2f2f2;
+				color: #272838;
+				box-shadow: 0 0 8px rgba($color: #000000, $alpha: 0.25);
+			}
+		}
+	}
+}
+.spn {
+	font-weight: 400;
+	font-size: var(--fs-12);
+	line-height: 120%;
+	color: #272838;
+	font-family: var(--font-montserrat);
+}
+
+.right {
+	padding-top: 16px;
+	justify-content: space-evenly;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 560px;
+}
+
+.right__item {
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	position: relative;
+}
+
+.right__number {
+	display: flex;
+	align-items: center;
+}
+
+.right__num {
+	width: 40px;
+	height: 40px;
+	flex-shrink: 0;
+	border-radius: 100%;
+	background: #f2b7c6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 120%;
+	color: #272838;
+	position: relative;
+}
+
+.right__info {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.right__title {
+	font-weight: 500;
+	font-size: var(--fs-20);
+	line-height: 120%;
+	color: #272838;
+}
+
+.right__description {
+	font-weight: 500;
+	font-size: var(--fs-16);
+	line-height: 120%;
+	color: #525360;
+}

@@ -1,0 +1,6 @@
+.bg {
+	background-image: url('../../../../public/background2.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	object-fit: contain;
+}

@@ -1,42 +1,92 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	margin: 0;
+	padding: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+a,
+input,
+button {
+	font-family: var(--font-montserrat), system-ui, Avenir, Helvetica, Arial,
+		sans-serif;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+li {
+	list-style: none;
+}
+
+h1,
+h3 {
+	font-family: var(--font-valisca);
+}
+
+h2,
+h4,
+h5,
+h6,
+p {
+	font-family: var(--font-montserrat);
+}
+
+:root {
+	--fs-12: clamp(0.6rem, 0.8vw, 0.9rem); /* 12px */
+	--fs-16: clamp(0.8rem, 1vw, 1.25rem); /* 16px */
+	--fs-18: clamp(0.9rem, 1.1vw, 1.4rem); /* 18px */
+	--fs-20: clamp(1rem, 1.25vw, 1.5rem); /* 20px */
+	--fs-24: clamp(1.2rem, 1.6vw, 1.8rem); /* 24px */
+	--fs-32: clamp(1.6rem, 2vw, 2.5rem); /* 32px */
+	--fs-40: clamp(2rem, 2.5vw, 3.125rem); /* 40px */
+	--fs-48: clamp(2.4rem, 3vw, 3.75rem); /* 48px */
+	--fs-56: clamp(3rem, 3.8vw, 4.35rem); /* 56px */
+}
+
+h1 {
+	font-size: var(--fs-48);
+}
+
+h3 {
+	font-size: var(--fs-32);
+}
+
+h4 {
+	font-size: var(--fs-24);
+}
+
+h5 {
+	font-size: var(--fs-20);
+}
+
+h6 {
+	font-size: var(--fs-18);
+}
+
+p,
+li,
+span {
+	font-size: var(--fs-16);
+}
+.small {
+	font-size: var(--fs-12);
 }
