@@ -1,4 +1,6 @@
 'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 import PopupOrder from '../popupOrder/PopupOrder'
@@ -6,8 +8,23 @@ import styles from './Header.module.scss'
 
 export default function Header() {
 	const [isOpen, setIsOpen] = useState(false)
+
+	const headerVariants = {
+		hidden: { y: -50, opacity: 0 },
+		visible: {
+			y: 0,
+			opacity: 1,
+			transition: { duration: 1.3, ease: 'easeOut' },
+		},
+	}
+
 	return (
-		<header className={styles.header}>
+		<motion.header
+			className={styles.header}
+			variants={headerVariants}
+			initial='hidden'
+			animate='visible'
+		>
 			<div className={styles.logo}>
 				<a href='/'>
 					<Image
@@ -30,6 +47,6 @@ export default function Header() {
 			</button>
 
 			<PopupOrder isOpen={isOpen} onClose={() => setIsOpen(false)} />
-		</header>
+		</motion.header>
 	)
 }

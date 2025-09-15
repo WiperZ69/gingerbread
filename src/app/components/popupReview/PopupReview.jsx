@@ -21,7 +21,9 @@ export default function PopupReview({ isOpen, onClose }) {
 				<form className={styles.form}>
 					<input type='text' placeholder='Имя' />
 					<textarea placeholder='Ваше пряничное мнение'></textarea>
-					<button type='submit'>Отправить</button>
+					<button onClick={onClose} type='submit'>
+						Отправить
+					</button>
 				</form>
 				<button className={styles.close} onClick={onClose}>
 					×

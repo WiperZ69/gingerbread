@@ -22,7 +22,9 @@ export default function PopupOrder({ isOpen, onClose }) {
 					<input type='text' placeholder='Имя' />
 					<input type='tel' placeholder='Телефон' />
 					<textarea placeholder='Ваши пожелания'></textarea>
-					<button type='submit'>Отправить</button>
+					<button onClick={onClose} type='submit'>
+						Отправить
+					</button>
 				</form>
 				<button className={styles.close} onClick={onClose}>
 					×

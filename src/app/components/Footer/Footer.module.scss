@@ -21,13 +21,13 @@
 .about__title {
 	font-weight: 500;
 	font-size: var(--fs-20);
-	color: #f2b7c6;
+	color: #272838;
 }
 
 .about__text {
 	font-weight: 500;
 	font-size: var(--fs-16);
-	color: #f2b7c6;
+	color: #272838;
 }
 
 .faq {
@@ -37,13 +37,13 @@
 }
 
 .faq__title {
-	border-left: 2px solid #f2b7c6;
+	border-left: 2px solid #272838;
 	padding-left: 16px;
 	font-style: italic;
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 120%;
-	color: #f2b7c6;
+	color: #272838;
 }
 
 .faq__phone,
@@ -55,17 +55,17 @@
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 120%;
-		color: #f2b7c6;
+		color: #272838;
 	}
 }
 
 .nav {
 	display: flex;
 	flex-direction: column;
-	gap: 24px;
+	gap: 16px;
 	a {
 		font-weight: 500;
-		font-size: 20px;
-		color: #f2b7c6;
+		font-size: 16px;
+		color: #272838;
 	}
 }

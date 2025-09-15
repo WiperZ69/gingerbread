@@ -1,7 +1,7 @@
 import FAQ from '../FAQ/FAQ'
 import Footer from '../Footer/Footer'
 import Form from '../Form/Form'
-import styles from './Bg3.module.css'
+import styles from './Bg3.module.scss'
 
 export default function Bg3() {
 	return (

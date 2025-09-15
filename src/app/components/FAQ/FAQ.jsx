@@ -1,30 +1,66 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useState } from 'react'
 import styles from './FAQ.module.scss'
+
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: { staggerChildren: 0.25 },
+	},
+}
+
+const cardVariants = {
+	hidden: { opacity: 0, scale: 0.9, y: 30 },
+	visible: {
+		opacity: 1,
+		scale: 1,
+		y: 0,
+		transition: { duration: 0.5, ease: 'easeOut' },
+	},
+}
 
 function FlipCard({ front, back, bgClass }) {
 	const [flipped, setFlipped] = useState(false)
 
 	return (
-		<div
+		<motion.div
 			className={`${styles.card} ${flipped ? styles.flipped : ''} ${bgClass}`}
 			onClick={() => setFlipped(!flipped)}
+			variants={cardVariants}
+			whileHover={{ scale: 1.02 }}
 		>
 			<div className={styles.card__inner}>
 				<div className={styles.card__front}>{front}</div>
 				<div className={styles.card__back}>{back}</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
 export default function FAQ() {
 	return (
 		<section className={styles.faq}>
-			<h2 className={styles.title}>Любопытно? Отвечаем!</h2>
-			<div className={styles.faq__container}>
+			<motion.h2
+				className={styles.title}
+				initial={{ opacity: 0, y: -20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.6 }}
+				viewport={{ once: true }}
+			>
+				Любопытно? Отвечаем!
+			</motion.h2>
+
+			<motion.div
+				className={styles.faq__container}
+				variants={containerVariants}
+				initial='hidden'
+				whileInView='visible'
+				viewport={{ once: true }}
+			>
 				<FlipCard
 					bgClass={styles.bg1}
 					front={
@@ -43,13 +79,7 @@ export default function FAQ() {
 						<>
 							<h5 className={`${styles.text} ${styles.back}`}>
 								Мы очень внимательно относимся к качеству наших пряников и не
-								экономим на ингредиентах. Пряничная основа: мука пшеничная
-								хлебопекарная высший сорт, масло сливочное высший сорт 82%,
-								сахар, яйца куриные категории С0, специи: имбирь, кардамон,
-								мускатный орех, корица, гвоздика.Глазурь: сахарная пудра, сухой
-								яичный белок, ароматизатор ванилин, лимонная кислота,
-								стабилизатор трагант, двуокись титана, и высококачественные
-								пищевые красители
+								экономим на ингредиентах. Пряничная основа: мука пшеничная...
 							</h5>
 							<Image
 								className={styles.click}
@@ -91,7 +121,6 @@ export default function FAQ() {
 						</>
 					}
 				/>
-
 				<FlipCard
 					bgClass={styles.bg3}
 					front={
@@ -224,7 +253,7 @@ export default function FAQ() {
 						</>
 					}
 				/>
-			</div>
+			</motion.div>
 		</section>
 	)
 }

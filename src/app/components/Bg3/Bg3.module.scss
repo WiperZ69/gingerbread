@@ -1,9 +1,12 @@
 .bg {
 	background-image: url('/background3.svg');
 	background-repeat: no-repeat;
-	background-size: 60%;
+	background-size: 50%;
 	background-position: top 115px right 0px;
-	object-fit: contain;
+	object-fit: cover;
+	@media (max-width: 1440px) {
+		background-size: 65%;
+	}
 }
 
 .bg2 {
